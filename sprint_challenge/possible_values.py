@@ -2,4 +2,4 @@
 
 adjectives = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
 
-products = ['Anvil', 'Catapult' 'Disguise' 'Mousetrap', 'mystery box']
+products = ['Anvil', 'Catapult' 'Disguise' 'Mousetrap', 'mysterybox']

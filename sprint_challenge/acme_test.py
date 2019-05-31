@@ -28,17 +28,23 @@ class AcmeProductTests(unittest.TestCase):
         prod = Product('Test Product')
         self.assertEqual(prod.stealability(), 'Kinda stealable.')
 
+
+
+class AcmeReportTests(unittest.TestCase):
+
     def test_default_num_products(self):
         """Test default number of products"""
         items = generate_products()
         self.assertEqual(len(items), 30)
 
-    # def test_legal_names(self):
-    #     """Test that names are legit"""
-    #       # I want to generate a list of all possible values.
-    #       # then I want to go through all items in generated list
-    #       # and check if the item is in the list of all possible items
-    #       pass
+
+    def test_legal_names(self):
+        '''Test that generated product names are valid'''
+        prods = generate_products()
+        for prod in prods:
+            start, end = prod.name.split(' ')
+            self.assertIn(start, adjectives)
+            self.assertIn(end, products)
 
 
 
